@@ -1,72 +1,59 @@
 package com.company.characters;
 
-public class Warrior {
-
-    private String name;
-    private String image;
-    private Integer life;
-    private Integer strength;
-
+public class Warrior extends Hero {
+    protected static final int MAX_Life =10 ;
+    protected static final int MIN_Life = 5;
+    protected static final int MAX_Strength = 10;
+    protected static final int MIN_Strength = 5;
 
     public Warrior() {
-        name = "Unknown";
-        image = "Unknown";
-        life = 5;
-        strength = 5;
-    }
-
-    public Warrior(String pickName) {
-        name = pickName;
-        image = "Unknown";
-        life = 5;
-        strength = 5;
-    }
-
-    public Warrior(String pickName, String pickImage, Integer pickLife, Integer pickStrength){
-        name=pickName;
-        image = pickImage;
-        life = pickLife;
-        strength = pickStrength;
+        super("Warrior","Unknown Warrior", MIN_Life, MIN_Strength, 0);
 
     }
 
-    public String toString(){
-        return "[ Warrior's name is : " + this.name
-                + " | Image : " + this.image
-                + " | Her.his current life is : " +this.life
-                + " | Her.his strength is : " +this.strength
-                + " ]";
+//    public Warrior(String name) {
+//        super(name,5,5,0);
+//    }
+//
+//    public Warrior(String name, int life, int strength, int attack){
+//       super(name, life, strength, attack);
+//    }
+
+    public String toString() {
+        return super.toString();
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public Integer getLife() {
+    public int getLife() {
         return life;
     }
-
-    public void setLife(Integer life) {
+    public void setLife(int life) {
         this.life = life;
+
     }
 
-    public Integer getStrength() {
+    public int getStrength() {
         return strength;
     }
-
-    public void setStrength(Integer strength) {
+    public void setStrength(int strength) {
         this.strength = strength;
     }
+
+
+    public int getMIN_Life(){
+        return Warrior.MIN_Life;
+    }
+    public int getMAX_Life(){
+        return Warrior.MAX_Life;
+    }
+
+    public int getMIN_Strength(){
+        return Warrior.MIN_Strength;
+    }
+    public int getMAX_Strength(){
+        return Warrior.MAX_Strength;
+    }
+
+
 }
+
