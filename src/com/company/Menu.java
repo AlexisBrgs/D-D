@@ -31,21 +31,22 @@ public class Menu {
                             isReady = true;
                             System.exit(0);
                         }
-                        case "N" -> {}
+                        case "N" -> {
+                        }
                     }
                 }
-                    default -> System.out.println("Bad choice...");
-                }
+                default -> System.out.println("Bad choice...");
             }
-            System.out.println("Goood. Now let's define your character." +
-                    "\nFollow my instructions, press enter ! ");
-            sc.nextLine();
-            return playerChoice;
-
         }
+        System.out.println("Goood. Now let's define your character." +
+                "\nFollow my instructions, press enter ! ");
+        sc.nextLine();
+        return playerChoice;
+
+    }
 
 
-    public void fillHero (Hero h){
+    public void fillHero(Hero h) {
 
 
         System.out.println("What is your name, " + h.getType() + ":");
@@ -65,28 +66,24 @@ public class Menu {
         h.setStrength(strength);
 
 
-        System.out.println(name+ ", I'm sorry to tell you this, but you have "
-                + h.getAttack() + " bonus attack points for the moment... :'(");
-
     }
 
 
+    public Hero createHero() {
+        String choice = choose();
+        Hero h;
+        if (choice.equals("WARRIOR")) {
+            h = new Warrior();
 
-        public void createHero () {
-            String choice = choose();
-
-            if (choice.equals("WARRIOR")) {
-                Hero w = new Warrior();
-                fillHero(w);
-                System.out.println(w.toString());
-            } else {
-                Hero m = new Mage();
-                fillHero(m);
-                System.out.println(m.toString());
-
-            }
+        } else {
+            h = new Mage();
         }
 
+        fillHero(h);
+        System.out.println(h.toString());
 
-
+        return h;
     }
+
+
+}

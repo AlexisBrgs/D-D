@@ -3,12 +3,18 @@ package com.company.event.enemies;
 import com.company.characters.Hero;
 import com.company.event.Event;
 
-public class Dragon implements Event {
+public class Dragon  extends Enemy implements Event{
 
-    @Override
-    public void interact(Hero h){}
-
+public Dragon(){
+    super(15,4);
+}
     public String toString(){
         return "Hey, a dragon !";
     }
+
+    @Override
+    public void interact(Hero h){
+        attack(h);
+    }
+
 }

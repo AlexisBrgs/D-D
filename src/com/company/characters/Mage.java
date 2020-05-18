@@ -7,7 +7,7 @@ public class Mage extends Hero {
     protected static final int MIN_Strength = 8;
 
     public Mage() {
-        super("Mage","Unknown Mage", MIN_Life, MIN_Strength, 0);
+        super("Mage","Unknown Mage", MIN_Life, MIN_Strength);
     }
 //
 //    public Mage(String name) {

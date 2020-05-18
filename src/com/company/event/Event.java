@@ -7,5 +7,4 @@ public interface Event {
 
 void interact(Hero h);
 
-
 }

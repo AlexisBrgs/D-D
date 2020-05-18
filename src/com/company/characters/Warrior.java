@@ -7,7 +7,7 @@ public class Warrior extends Hero {
     protected static final int MIN_Strength = 5;
 
     public Warrior() {
-        super("Warrior", "Unknown Warrior", MIN_Life, MIN_Strength, 0);
+        super("Warrior", "Unknown Warrior", MIN_Life, MIN_Strength);
 
     }
 

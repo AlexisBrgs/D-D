@@ -6,14 +6,13 @@ public abstract class Hero {
     protected String name;
     protected int life;
     protected int strength;
-    protected int attack;
 
-    public Hero(String type, String name, int life, int strength, int attack) {
+
+    public Hero(String type, String name, int life, int strength) {
         this.type = type;
         this.name = name;
         this.life = life;
         this.strength = strength;
-        this.attack = attack;
 
     }
 
@@ -26,7 +25,6 @@ public abstract class Hero {
                 + "\n - Your name is " + this.name + "."
                 + "\n - You have " + this.life + " HP."
                 + "\n - You have " + this.strength + " of strength."
-                + "\n - You have " + this.attack + " attack points."
                 + "\n---------------------------------------";
     }
 
@@ -76,14 +74,6 @@ public abstract class Hero {
         else {
             this.strength=getMIN_Strength();
         }
-    }
-
-
-    public int getAttack() {
-        return attack;
-    }
-    public void setAttack(int attack) {
-        this.attack = attack;
     }
 
 

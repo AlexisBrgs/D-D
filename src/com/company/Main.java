@@ -1,14 +1,16 @@
 package com.company;
 
-public class Main {
+import com.company.characters.Hero;
 
-    public static void main(String[] args) {
+public interface Main {
+
+    static void main(String[] args) {
 
 
         Menu menu = new Menu();
-        menu.createHero();
+        Hero h = menu.createHero();
 
-        Game game = new Game();
+        Game game = new Game(h);
         game.play();
 
 

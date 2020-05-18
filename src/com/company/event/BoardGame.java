@@ -1,7 +1,7 @@
 package com.company.event;
 
 import com.company.event.enemies.*;
-import com.company.event.bonus.*;
+import com.company.event.bonuses.*;
 
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class BoardGame {
 
     public BoardGame() {
 
-        for (int i =0; i < bgLength; i++) {
+        for (int i =0; i <= bgLength; i++) {
 
             Event e;
             switch (i) {
