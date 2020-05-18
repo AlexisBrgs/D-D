@@ -17,6 +17,7 @@ public abstract class Hero {
 
     }
 
+
     public String toString() {
         return "---------------------------------------"
                 + "\n                RECAP"
@@ -44,18 +45,37 @@ public abstract class Hero {
         this.name = name;
     }
 
+
     public int getLife() {
         return life;
     }
     public void setLife(int life) {
-        this.life = life;
+        if (getMIN_Life()<=life && life<=getMAX_Life()){
+            this.life = life;
+        }
+        else if (life>getMAX_Life()){
+            this.life=getMAX_Life();
+        }
+        else {
+            this.life=getMIN_Life();
+        }
     }
+
 
     public int getStrength() {
         return strength;
     }
+
     public void setStrength(int strength) {
-        this.strength = strength;
+        if (getMIN_Strength()<=strength && strength<=getMAX_Life()){
+            this.strength = strength;
+        }
+        else if (strength>getMAX_Life()){
+            this.strength=getMAX_Life();
+        }
+        else {
+            this.strength=getMIN_Strength();
+        }
     }
 
 
@@ -74,8 +94,10 @@ public abstract class Hero {
         this.type = type;
     }
 
+
     public abstract int getMIN_Life();
     public abstract int getMAX_Life();
+
 
     public abstract int getMIN_Strength();
     public abstract int getMAX_Strength();

@@ -1,15 +1,15 @@
 package com.company.characters;
 
 public class Mage extends Hero {
-    public static final int MAX_Life = 6;
-    public static final int MIN_Life = 3;
-    public static final int MAX_Strength = 15;
-    public static final int MIN_Strength = 8;
+    protected static final int MAX_Life = 6;
+    protected static final int MIN_Life = 3;
+    protected static final int MAX_Strength = 15;
+    protected static final int MIN_Strength = 8;
 
     public Mage() {
         super("Mage","Unknown Mage", MIN_Life, MIN_Strength, 0);
     }
-
+//
 //    public Mage(String name) {
 //        super(name,5,5,0);
 //
@@ -28,9 +28,7 @@ public class Mage extends Hero {
     public int getLife() {
         return life;
     }
-    public void setLife(int life) {
-        this.life = life;
-    }
+
 
     public int getStrength() {
         return strength;
