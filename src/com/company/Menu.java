@@ -65,10 +65,11 @@ public class Menu {
         h.setStrength(strength);
 
 
-        System.out.println(name+ "I'm sorry to tell you this, but you have "
+        System.out.println(name+ ", I'm sorry to tell you this, but you have "
                 + h.getAttack() + " bonus attack points for the moment... :'(");
 
     }
+
 
 
         public void createHero () {

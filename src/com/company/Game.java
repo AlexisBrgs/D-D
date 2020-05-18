@@ -4,6 +4,7 @@ import com.company.event.BoardGame;
 
 import java.util.Scanner;
 
+
 public class Game {
     int pos = 0;
     int board = 64;
@@ -46,7 +47,8 @@ public class Game {
                     + "\n                TURN " + turn
                     + "\n---------------------------------------"
                     + "\n You throw a " + dice
-                    + "\n Your current position is " + boardgame.bg.get(pos).description
+                    + "\n Your current position is " + pos
+                    + "\n" +boardgame.bg.get(pos)
                     + "\n Press enter to continue");
             sc.nextLine();
         }
