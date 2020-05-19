@@ -47,6 +47,7 @@ public abstract class Hero {
     public int getLife() {
         return life;
     }
+
     public void setLife(int life) {
         if (getMIN_Life()<=life && life<=getMAX_Life()){
             this.life = life;

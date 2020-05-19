@@ -36,7 +36,7 @@ public class Game {
     public void play() {
         BoardGame boardgame = new BoardGame();
         Scanner sc = new Scanner(System.in);
-        while (pos < boardgame.bg.size()) {
+        while (pos < boardgame.bg.size()-1) {
 
             int dice = randomise();
 

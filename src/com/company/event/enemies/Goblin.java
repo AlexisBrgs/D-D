@@ -14,6 +14,7 @@ public class Goblin extends Enemy implements Event {
 
     @Override
     public void interact(Hero h){
+        System.out.println("Engage le combat goblin");
         attack(h);
     }
 }

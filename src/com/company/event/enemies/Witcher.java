@@ -15,6 +15,7 @@ public class Witcher extends Enemy implements Event {
 
     @Override
     public void interact(Hero h){
+        System.out.println("Engage le combat witcher");
         attack(h);
     }
 }
