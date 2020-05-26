@@ -25,28 +25,19 @@ public class Mage extends Hero {
         return super.toString();
     }
 
-    public int getLife() {
-        return life;
-    }
-
-
-    public int getStrength() {
-        return strength;
-    }
-    public void setStrength(int strength) {
-        this.strength = strength;
-    }
-
+    @Override
     public int getMIN_Life(){
         return Mage.MIN_Life;
     }
+    @Override
     public int getMAX_Life(){
         return Mage.MAX_Life;
     }
-
+    @Override
     public int getMIN_Strength(){
         return Mage.MIN_Strength;
     }
+    @Override
     public int getMAX_Strength(){
         return Mage.MAX_Strength;
     }

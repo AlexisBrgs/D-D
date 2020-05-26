@@ -8,13 +8,20 @@ import java.util.ArrayList;
 
 public class BoardGame {
 
-    int bgLength = 64;
-    public ArrayList<Event> bg = new ArrayList<>();
 
+
+    public static final int BG_LENGTH = 64;
+
+    private ArrayList<Event> bg = new ArrayList<>();
+
+    public Event getEvent(int position){
+        return bg.get(position);
+    }
 
     public BoardGame() {
 
-        for (int i =0; i <= bgLength; i++) {
+
+        for (int i = 0; i <= BG_LENGTH; i++) {
 
             Event e;
             switch (i) {

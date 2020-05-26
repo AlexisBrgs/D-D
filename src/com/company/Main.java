@@ -9,7 +9,6 @@ public interface Main {
 
         Menu menu = new Menu();
         Hero h = menu.createHero();
-
         Game game = new Game(h);
         game.play();
 

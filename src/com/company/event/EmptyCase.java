@@ -9,8 +9,8 @@ public class EmptyCase implements Event {
         return " Empty case, there's nothing around here...";
     }
 
+
     @Override
     public void interact(Hero h) {
-
     }
 }

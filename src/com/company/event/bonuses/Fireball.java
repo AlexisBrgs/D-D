@@ -2,9 +2,8 @@ package com.company.event.bonuses;
 
 import com.company.characters.Hero;
 import com.company.characters.Mage;
-import com.company.event.Event;
 
-public class Fireball extends Bonus implements Event {
+public class Fireball extends Bonus  {
 
     public Fireball() {
         super(0,7);
@@ -18,7 +17,7 @@ public class Fireball extends Bonus implements Event {
 
         if (h instanceof Mage) {
             System.out.println("You can drop this fireball, coz you're a Mage !");
-            add(h);
+            updateStats(h);
         } else {
             System.out.println("Get the fuck out fucking dwarf, you can't drop that !");
         }

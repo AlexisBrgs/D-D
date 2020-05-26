@@ -1,9 +1,10 @@
 package com.company.event.enemies;
 
+import com.company.Fight;
 import com.company.characters.Hero;
-import com.company.event.Event;
 
-public class Goblin extends Enemy implements Event {
+
+public class Goblin extends Enemy  {
 
     public Goblin (){
         super(6,1);
@@ -14,7 +15,6 @@ public class Goblin extends Enemy implements Event {
 
     @Override
     public void interact(Hero h){
-        System.out.println("Engage le combat goblin");
-        attack(h);
+        System.out.println("FIGHT THE GOBLIN PHASE");
     }
 }

@@ -1,9 +1,9 @@
 package com.company.event.enemies;
 
 import com.company.characters.Hero;
-import com.company.event.Event;
 
-public class Dragon  extends Enemy implements Event{
+
+public class Dragon  extends Enemy {
 
 public Dragon(){
     super(15,4);

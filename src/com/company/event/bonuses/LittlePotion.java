@@ -1,9 +1,9 @@
 package com.company.event.bonuses;
 
 import com.company.characters.Hero;
-import com.company.event.Event;
 
-public class LittlePotion extends Bonus implements Event {
+
+public class LittlePotion extends Bonus  {
 
     public LittlePotion() {
 
@@ -16,7 +16,7 @@ public class LittlePotion extends Bonus implements Event {
 
 
     public void interact(Hero h){
-        add(h);
+        updateStats(h);
     }
 
 }

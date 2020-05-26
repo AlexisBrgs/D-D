@@ -8,6 +8,10 @@ import java.util.Scanner;
 public class Menu {
     Scanner sc = new Scanner(System.in);
 
+    /**
+     * Methode permettant de choisir un type de heros ou quitter. Retourne le choix de l'utilisateur.
+     * @return
+     */
     public String choose() {
         boolean isReady = false;
         String playerChoice = "";
@@ -45,7 +49,10 @@ public class Menu {
 
     }
 
-
+    /**
+     * Methode permettant de remplir les stats du heros en fction du max et min de chaque type de heros
+     * @param h Hero
+     */
     public void fillHero(Hero h) {
 
 
@@ -68,7 +75,10 @@ public class Menu {
 
     }
 
-
+    /**
+     * Methode permettant d'instancier soit un mage, soit un guerrier en fct du choix du user. Puis on utilise la methode fill pour remplir les stats.
+     * @return
+     */
     public Hero createHero() {
         String choice = choose();
         Hero h;
