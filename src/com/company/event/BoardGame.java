@@ -18,6 +18,16 @@ public class BoardGame {
         return bg.get(position);
     }
 
+//    public boolean addEvent(int index, Event ev) {
+//
+//        if (index<BG_LENGTH && index>=0 && ev!=null){
+//           bg.set(index,new EmptyCase());
+//            return true;
+//        }
+//        return false;
+//    }
+//
+
     public BoardGame() {
 
 

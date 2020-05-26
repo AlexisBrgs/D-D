@@ -15,6 +15,8 @@ public class Goblin extends Enemy  {
 
     @Override
     public void interact(Hero h){
-        System.out.println("FIGHT THE GOBLIN PHASE");
+        System.out.println("---------------------------------------" +
+                "\n FIGHT THE GOBLIN PHASE, press enter !"
+                + "\n---------------------------------------");
     }
 }

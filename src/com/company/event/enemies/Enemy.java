@@ -3,7 +3,7 @@ package com.company.event.enemies;
 import com.company.characters.Hero;
 import com.company.event.Event;
 
-import java.util.Scanner;
+
 
 
 public abstract class Enemy implements Event {
@@ -19,10 +19,6 @@ public abstract class Enemy implements Event {
     public Enemy(int life, int strength) {
         this.life = life;
         this.strength = strength;
-    }
-
-    public void attack(Hero h) {
-
     }
 
 

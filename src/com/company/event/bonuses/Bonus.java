@@ -31,6 +31,12 @@ public abstract class Bonus implements Event {
         h.updateLife(this);
     }
 
+    public void interact(Hero h){
+        System.out.println("---------------------------------------" +
+                "\n IT IS A DROP PHASE LUCKY YOU, press enter !"
+                + "\n---------------------------------------");
+    }
+
     public int getLife() {
         return life;
     }

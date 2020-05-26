@@ -14,8 +14,9 @@ public Dragon(){
 
     @Override
     public void interact(Hero h){
-        System.out.println("Engage le combat goblin");
-        attack(h);
+        System.out.println("---------------------------------------" +
+                "\n FIGHT THE DRAGON PHASE, press enter !"
+                + "\n---------------------------------------");
     }
 
 }

@@ -14,7 +14,6 @@ public class Fireball extends Bonus  {
 
 
     public void interact(Hero h) {
-
         if (h instanceof Mage) {
             System.out.println("You can drop this fireball, coz you're a Mage !");
             updateStats(h);

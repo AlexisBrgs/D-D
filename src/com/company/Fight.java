@@ -6,13 +6,16 @@ import com.company.event.enemies.Enemy;
 import java.util.Scanner;
 
 public class Fight {
-    public static final int RUN_AWAY = 1;
-    public static final int ENEMY_DEAD = 2;
-    public static final int HERO_DEAD = 3;
+
+    enum Status {
+        RUN_AWAY,
+        ENEMY_DEAD,
+        HERO_DEAD
+    }
 
     protected int tour = 0;
 
-    public int start(Hero h, Enemy e) {
+    public Status start(Hero h, Enemy e) {
 
         Scanner sc = new Scanner(System.in);
         String choice;
@@ -22,7 +25,7 @@ public class Fight {
             choice = sc.nextLine().toUpperCase();
             switch (choice) {
                 case "N" -> {
-                    return RUN_AWAY;
+                    return Status.RUN_AWAY;
                 }
                 case "Y" -> {
                     tour++;
@@ -42,13 +45,13 @@ public class Fight {
 
                         } else {
                             System.out.println("T'es mort comme la sous merde que tu es.");
-                            return HERO_DEAD;
+                            return Status.HERO_DEAD;
                         }
                     }
 
                     else {
                         System.out.println("You fucked him, he's screwed");
-                        return ENEMY_DEAD;
+                        return Status.ENEMY_DEAD;
                     }
                 }
             }

@@ -7,6 +7,8 @@ import com.company.event.enemies.Enemy;
 
 import java.util.Scanner;
 
+import static com.company.Fight.Status;
+
 
 public class Game {
 
@@ -68,25 +70,18 @@ public class Game {
                     + "\n Press enter to continue.");
             sc.nextLine();
 
-            //Pré combat
-
-
-            System.out.println("---------------------------------------" +
-                    "\n Drop / Fight phase, press enter !"
-                    + "\n---------------------------------------");
-            sc.nextLine();
-
 
             Event ev = boardgame.getEvent(pos);
             ev.interact(this.hero);
-
+            sc.nextLine();
             if (ev instanceof Enemy) {
                 Enemy enemy = (Enemy) ev;
+
                 Fight fight = new Fight();
-                int result = fight.start(hero, enemy);
+                Status result = fight.start(hero, enemy);
                 switch (result) {
 
-                    case Fight.RUN_AWAY -> {
+                    case RUN_AWAY -> {
                         System.out.println("You are a fucking wet blanket, let's roll a dice to punish you and get back ");
                             moveBack(dice);
 
@@ -103,10 +98,10 @@ public class Game {
 
                     }
 
-                    case Fight.ENEMY_DEAD -> {
+                    case ENEMY_DEAD -> {
                         System.out.println("GG, YOU WON THIS FIGHT");
                     }
-                    case Fight.HERO_DEAD -> {
+                    case HERO_DEAD -> {
                         System.out.println("You suck. GAME OVER");
                         System.exit(0);
                     }

@@ -15,7 +15,8 @@ public class Witcher extends Enemy {
 
     @Override
     public void interact(Hero h){
-        System.out.println("Engage le combat witcher");
-        attack(h);
+        System.out.println("---------------------------------------" +
+                "\n FIGHT THE GOBLIN PHASE, press enter !"
+                + "\n---------------------------------------");
     }
 }
